@@ -17,10 +17,12 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Handle collision with enemies
-        if (collision.CompareTag("Enemy"))
+        Debug.Log($"PlayerBullet collided with: {collision.gameObject.name}");
+        Health targetHealth = collision.GetComponent<Health>();
+        if (targetHealth != null && collision.CompareTag("Enemy"))
         {
-            Destroy(collision.gameObject); // Destroy the enemy
+            Debug.Log("PlayerBullet hit the Enemy!");
+            targetHealth.TakeDamage(20); // Example damage value
             Destroy(gameObject); // Destroy the bullet
         }
     }

@@ -20,14 +20,14 @@ public class EnemyBullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log($"EnemyBullet collided with: {collision.gameObject.name}");
         // Handle collision with the player
-        if (collision.CompareTag("Player"))
+        Health targetHealth = collision.GetComponent<Health>();
+        if (targetHealth != null && collision.CompareTag("Player"))
         {
-            // Destroy the bullet
-            Destroy(gameObject);
-
-            // Optionally, handle player damage here or notify the Player script
-            Debug.Log("Player hit by enemy bullet!");
+            Debug.Log("EnemyBullet hit the Player!");
+            targetHealth.TakeDamage(10); // Example damage value
+            Destroy(gameObject); // Destroy the bullet
         }
 
         // Optional: Destroy the bullet if it collides with other objects like walls

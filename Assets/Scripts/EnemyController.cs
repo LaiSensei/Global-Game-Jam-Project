@@ -12,7 +12,7 @@ public class EnemyController : MonoBehaviour
     [Header("Shooting Settings")]
     [SerializeField] private GameObject bulletPrefab; // Enemy's bullet prefab
     [SerializeField] private Transform bulletSpawnPoint; // Position to spawn bullets
-    public float fireRate = 1f; // Time between shots
+    public float fireRate = 0.2f; // Time between shots
     private float fireCooldown = 0f; // Tracks time until next shot
 
     void Update()
