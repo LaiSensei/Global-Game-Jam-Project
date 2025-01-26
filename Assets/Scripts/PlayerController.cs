@@ -19,6 +19,25 @@ public class PlayerController : MonoBehaviour
     private float ultimateTimer = 0f; // Tracks time since last use
     [SerializeField] private Image ultimateCooldownUI; // Reference to the UI Image for the cooldown indicator
 
+    private Health health; // Reference to the Health component
+
+    private void Awake()
+    {
+        health = GetComponent<Health>();
+    }
+
+    private void Start()
+    {
+        // Subscribe to the Health death event
+        health.HealthDepleted += OnPlayerDeath;
+    }
+
+    private void OnDestroy()
+    {
+        // Unsubscribe to avoid memory leaks
+        health.HealthDepleted -= OnPlayerDeath;
+    }
+
     void Update()
     {
         HandleMovement();
@@ -90,5 +109,10 @@ public class PlayerController : MonoBehaviour
         }
 
         // Optional: Add visual or audio effects here (e.g., explosion, screen shake)
+    }
+
+    private void OnPlayerDeath()
+    {
+        GameManager.Instance.GameOver("You Died!");
     }
 }

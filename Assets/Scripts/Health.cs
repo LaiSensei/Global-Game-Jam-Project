@@ -10,6 +10,13 @@ public class Health : MonoBehaviour
     [Header("UI Settings")]
     [SerializeField] private Image healthBar; // Optional: Assign this for objects with a health bar
 
+    [Header("Death Settings")]
+    [SerializeField] private bool isPlayer = false; // Set true for the player, false for enemies
+
+    // Event for notifying other scripts about health depletion
+    public delegate void OnHealthDepleted();
+    public event OnHealthDepleted HealthDepleted;
+
     void Start()
     {
         // Initialize current health to max health
@@ -53,11 +60,28 @@ public class Health : MonoBehaviour
 
     private void Die()
     {
-        // Handle death logic here
+        // Trigger the HealthDepleted event (if subscribed)
+        HealthDepleted?.Invoke();
+
+        // Notify the GameManager directly (if applicable)
+        if (isPlayer)
+        {
+            GameManager.Instance.GameOver("You Died!");
+        }
+        else
+        {
+            GameManager.Instance.GameOver("You Won!");
+        }
+
         Debug.Log($"{gameObject.name} has died!");
 
-        // Add custom death behavior (e.g., animations, game over triggers, etc.)
-        Destroy(gameObject); // Destroy the GameObject
+        // Add additional death logic here (e.g., animations, effects)
+
+        // Destroy the GameObject if it's an enemy
+        if (!isPlayer)
+        {
+            Destroy(gameObject);
+        }
     }
 
     // Optional: Add a method to heal

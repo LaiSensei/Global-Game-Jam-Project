@@ -12,7 +12,8 @@ public class GameManager : MonoBehaviour
     [Header("UI Elements")]
     [SerializeField] private GameObject gameOverScreen; // Reference to the Game Over UI
     [SerializeField] private Text gameOverText; // Text component for displaying the message
-    [SerializeField] private Button restartButton; // Restart button (optional: Quit button could be added here)
+    [SerializeField] private Button restartButton; // Restart button
+    [SerializeField] private Button quitButton; // Quit button
 
     private void Awake()
     {
@@ -27,13 +28,32 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Triggers a game over event with a specific message.
-    /// </summary>
-    /// <param name="message">Message to display (e.g., Victory or Defeat)</param>
+    private void Start()
+    {
+        // Ensure Game Over screen is hidden at the start
+        if (gameOverScreen != null)
+        {
+            gameOverScreen.SetActive(false);
+        }
+
+        // Ensure time is running at game start
+        Time.timeScale = 1f;
+
+        // Link button functionality
+        if (restartButton != null)
+        {
+            restartButton.onClick.AddListener(RestartGame);
+        }
+
+        if (quitButton != null)
+        {
+            quitButton.onClick.AddListener(QuitGame);
+        }
+    }
+
     public void GameOver(string message)
     {
-        if (isGameOver) return;
+        if (isGameOver) return; // Prevent multiple GameOver triggers
 
         isGameOver = true;
 
@@ -49,25 +69,19 @@ public class GameManager : MonoBehaviour
             gameOverText.text = message;
         }
 
-        // Pause the game (optional)
-        Time.timeScale = 0f; // Stops all time-based actions
+        // Pause the game
+        Time.timeScale = 0f;
     }
 
-    /// <summary>
-    /// Restarts the game.
-    /// </summary>
     public void RestartGame()
     {
         Time.timeScale = 1f; // Resume time
         SceneManager.LoadScene(SceneManager.GetActiveScene().name); // Reload the current scene
     }
 
-    /// <summary>
-    /// Quits the game.
-    /// </summary>
     public void QuitGame()
     {
         Debug.Log("Quit Game triggered.");
-        Application.Quit();
+        Application.Quit(); // Quits the application
     }
 }

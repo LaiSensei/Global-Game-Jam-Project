@@ -13,7 +13,6 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private GameObject bulletPrefab; // Enemy's bullet prefab
     [SerializeField] private Transform[] bulletSpawnPoints; // Array of spawn points for bullets
 
-    // Individual fire rates for each pattern
     [Header("Fire Rates for Patterns")]
     public float singleShotRate = 1f; // Fire rate for Single Shot
     public float spreadShotRate = 1.5f; // Fire rate for Spread Shot
@@ -24,6 +23,25 @@ public class EnemyController : MonoBehaviour
     private int currentPattern = 0; // Tracks the current bullet pattern
     public float patternSwitchTime = 10f; // Time to stay on each pattern
     private float patternTimer = 0f; // Tracks time for switching patterns
+
+    private Health health; // Reference to the Health component
+
+    private void Awake()
+    {
+        health = GetComponent<Health>();
+    }
+
+    private void Start()
+    {
+        // Subscribe to the Health death event
+        health.HealthDepleted += OnEnemyDeath;
+    }
+
+    private void OnDestroy()
+    {
+        // Unsubscribe to avoid memory leaks
+        health.HealthDepleted -= OnEnemyDeath;
+    }
 
     void Update()
     {
@@ -127,5 +145,10 @@ public class EnemyController : MonoBehaviour
                 Instantiate(bulletPrefab, spawnPoint.position, rotation);
             }
         }
+    }
+
+    private void OnEnemyDeath()
+    {
+        GameManager.Instance.GameOver("You Won!");
     }
 }
