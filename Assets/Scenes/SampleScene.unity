@@ -205,7 +205,7 @@ PrefabInstance:
     - target: {fileID: 4071068861283744430, guid: cb6ed6c0961a6c14dbc7516e9ea89a7e, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 83f4c283fe1a3b34d829d81b3d347220, type: 2}
+      objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 4089752154776870712, guid: cb6ed6c0961a6c14dbc7516e9ea89a7e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -526,6 +526,8 @@ MonoBehaviour:
   bulletPrefab: {fileID: 9079569202589245033, guid: 002b7bb2c6b15b640921062094fae07a, type: 3}
   bulletSpawnPoint: {fileID: 1895753188}
   fireRate: 0.2
+  ultimateCooldown: 10
+  ultimateCooldownUI: {fileID: 0}
 --- !u!4 &472040643
 Transform:
   m_ObjectHideFlags: 0
