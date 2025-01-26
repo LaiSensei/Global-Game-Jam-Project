@@ -203,6 +203,22 @@ PrefabInstance:
     m_TransformParent: {fileID: 472040643}
     m_Modifications:
     - target: {fileID: 4071068861283744430, guid: cb6ed6c0961a6c14dbc7516e9ea89a7e, type: 3}
+      propertyPath: m_Size.x
+      value: 0.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 4071068861283744430, guid: cb6ed6c0961a6c14dbc7516e9ea89a7e, type: 3}
+      propertyPath: m_Size.y
+      value: 0.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 4071068861283744430, guid: cb6ed6c0961a6c14dbc7516e9ea89a7e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2015721441, guid: 373fb57428eabf3498979b4df748a313, type: 3}
+    - target: {fileID: 4071068861283744430, guid: cb6ed6c0961a6c14dbc7516e9ea89a7e, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4071068861283744430, guid: cb6ed6c0961a6c14dbc7516e9ea89a7e, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
