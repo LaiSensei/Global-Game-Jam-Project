@@ -127,7 +127,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: player_character_0
+      name: player_character_left1
       rect:
         serializedVersion: 2
         x: 8
@@ -149,7 +149,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_character_1
+      name: player_character_right1
       rect:
         serializedVersion: 2
         x: 72
@@ -171,7 +171,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_character_2
+      name: player_character_idle1
       rect:
         serializedVersion: 2
         x: 144
@@ -193,7 +193,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_character_3
+      name: player_character_left2
       rect:
         serializedVersion: 2
         x: 10
@@ -215,7 +215,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_character_4
+      name: player_character_right2
       rect:
         serializedVersion: 2
         x: 68
@@ -237,7 +237,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_character_5
+      name: player_character_idle2
       rect:
         serializedVersion: 2
         x: 143
@@ -259,7 +259,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_character_6
+      name: player_character_left3
       rect:
         serializedVersion: 2
         x: 10
@@ -281,7 +281,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_character_7
+      name: player_character_right3
       rect:
         serializedVersion: 2
         x: 67
@@ -303,7 +303,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_character_8
+      name: player_character_idle3
       rect:
         serializedVersion: 2
         x: 142
@@ -324,6 +324,28 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: player_character_red
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 3
+        width: 37
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96e968348948227408ecba51342ba632
+      internalID: -2063601642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -338,19 +360,18 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":3.0,"y":6.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      player_character_0: -2015721441
-      player_character_1: -639079873
-      player_character_10: -2137490727
-      player_character_2: 7409049
-      player_character_3: 1421632714
-      player_character_4: 687787247
-      player_character_5: 1462707128
-      player_character_6: -1742729290
-      player_character_7: -1346323860
-      player_character_8: 1385339386
-      player_character_9: 1816026057
+      player_character_idle1: 7409049
+      player_character_idle2: 1462707128
+      player_character_idle3: 1385339386
+      player_character_left1: -2015721441
+      player_character_left2: 1421632714
+      player_character_left3: -1742729290
+      player_character_red: 1816026057
+      player_character_right1: -639079873
+      player_character_right2: 687787247
+      player_character_right3: -1346323860
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
