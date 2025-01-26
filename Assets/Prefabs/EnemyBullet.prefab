@@ -79,7 +79,7 @@ PrefabInstance:
     - target: {fileID: 3434276073137344293, guid: 79a88be8a98697b4f9ca2d8fc74ca53e, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 3654366284760198641, guid: 4feb8d393f240e144a58651ce153d637, type: 3}
+      objectReference: {fileID: 1353857025427883630, guid: bdaccb356eaf49946a7068c1bd17bf89, type: 3}
     - target: {fileID: 3434276073137344293, guid: 79a88be8a98697b4f9ca2d8fc74ca53e, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -112,6 +112,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 786852097740477376, guid: 79a88be8a98697b4f9ca2d8fc74ca53e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4178104314909686909}
+    - targetCorrespondingSourceObject: {fileID: 6588589248470371384, guid: 79a88be8a98697b4f9ca2d8fc74ca53e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4527808808562829910}
   m_SourcePrefab: {fileID: 100100000, guid: 79a88be8a98697b4f9ca2d8fc74ca53e, type: 3}
 --- !u!1 &3871204769425515486 stripped
 GameObject:
@@ -168,3 +171,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   lifetime: 5
+--- !u!1 &7223038131060653094 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6588589248470371384, guid: 79a88be8a98697b4f9ca2d8fc74ca53e, type: 3}
+  m_PrefabInstance: {fileID: 4562777449035755550}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &4527808808562829910
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7223038131060653094}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2b6112690f012414d8a3332edaa1532c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
