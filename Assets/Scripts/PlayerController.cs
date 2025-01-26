@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -13,10 +14,16 @@ public class PlayerController : MonoBehaviour
     public float fireRate = 0.2f; // Time between shots (in seconds)
     private float fireCooldown = 0f; // Tracks time until the next shot
 
+    [Header("Ultimate Ability Settings")]
+    [SerializeField] private float ultimateCooldown = 10f; // Cooldown duration for the ultimate ability
+    private float ultimateTimer = 0f; // Tracks time since last use
+    [SerializeField] private Image ultimateCooldownUI; // Reference to the UI Image for the cooldown indicator
+
     void Update()
     {
         HandleMovement();
         HandleShooting();
+        HandleUltimateAbility();
     }
 
     void HandleMovement()
@@ -50,5 +57,38 @@ public class PlayerController : MonoBehaviour
     {
         // Instantiate a bullet at the spawn point's position and rotation
         Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
+    }
+
+    void HandleUltimateAbility()
+    {
+        // Reduce the cooldown timer
+        ultimateTimer -= Time.deltaTime;
+
+        // Update the cooldown UI (if assigned)
+        if (ultimateCooldownUI != null)
+        {
+            ultimateCooldownUI.fillAmount = Mathf.Clamp01(ultimateTimer / ultimateCooldown);
+        }
+
+        // Check if the ultimate ability key is pressed and the cooldown is finished
+        if (Input.GetKeyDown(KeyCode.F) && ultimateTimer <= 0f)
+        {
+            ActivateUltimateAbility();
+            ultimateTimer = ultimateCooldown; // Reset the cooldown timer
+        }
+    }
+
+    void ActivateUltimateAbility()
+    {
+        Debug.Log("Ultimate Ability Activated!");
+
+        // Find and destroy all bullets with the "EnemyBullet" tag
+        GameObject[] enemyBullets = GameObject.FindGameObjectsWithTag("EnemyBullet");
+        foreach (GameObject bullet in enemyBullets)
+        {
+            Destroy(bullet);
+        }
+
+        // Optional: Add visual or audio effects here (e.g., explosion, screen shake)
     }
 }
