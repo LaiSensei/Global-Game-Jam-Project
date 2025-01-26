@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour
         fireCooldown -= Time.deltaTime;
 
         // Check if the fire button is pressed and cooldown is over
-        if (Input.GetKey(KeyCode.Space) && fireCooldown <= 0f)
+        if (Input.GetKey(KeyCode.J) && fireCooldown <= 0f)
         {
             Shoot();
             fireCooldown = fireRate; // Reset the cooldown
