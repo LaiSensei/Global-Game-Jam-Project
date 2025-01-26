@@ -187,6 +187,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8383806050781823276, guid: cb6ed6c0961a6c14dbc7516e9ea89a7e, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -333,7 +337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfb553eb526df05478293808fdf052ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 300
 --- !u!61 &472040645
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -378,7 +382,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.5, y: 0.6}
   m_EdgeRadius: 0
 --- !u!50 &472040646
 Rigidbody2D:
@@ -673,6 +677,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1895753188}
     m_Modifications:
+    - target: {fileID: 1579767237930948593, guid: 002b7bb2c6b15b640921062094fae07a, type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1579767237930948593, guid: 002b7bb2c6b15b640921062094fae07a, type: 3}
+      propertyPath: m_Size.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3424203318257762705, guid: 002b7bb2c6b15b640921062094fae07a, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -829,11 +841,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6797094852353059398, guid: 4a19e705c2d5c1f41b718d45ce677c7a, type: 3}
       propertyPath: m_Size.x
-      value: 1.1
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 6797094852353059398, guid: 4a19e705c2d5c1f41b718d45ce677c7a, type: 3}
       propertyPath: m_Size.y
-      value: 1.1
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 6797094852353059398, guid: 4a19e705c2d5c1f41b718d45ce677c7a, type: 3}
       propertyPath: m_IsTrigger
@@ -918,11 +930,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6797094852353059398, guid: 4a19e705c2d5c1f41b718d45ce677c7a, type: 3}
       propertyPath: m_Size.x
-      value: 1.1
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 6797094852353059398, guid: 4a19e705c2d5c1f41b718d45ce677c7a, type: 3}
       propertyPath: m_Size.y
-      value: 1.1
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 6797094852353059398, guid: 4a19e705c2d5c1f41b718d45ce677c7a, type: 3}
       propertyPath: m_IsTrigger
@@ -1064,13 +1076,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4178104314909686909, guid: 4a19e705c2d5c1f41b718d45ce677c7a, type: 3}
+      propertyPath: speed
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4178104314909686909, guid: 4a19e705c2d5c1f41b718d45ce677c7a, type: 3}
+      propertyPath: lifetime
+      value: 4.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6797094852353059398, guid: 4a19e705c2d5c1f41b718d45ce677c7a, type: 3}
       propertyPath: m_Size.x
-      value: 1.1
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 6797094852353059398, guid: 4a19e705c2d5c1f41b718d45ce677c7a, type: 3}
       propertyPath: m_Size.y
-      value: 1.1
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 6797094852353059398, guid: 4a19e705c2d5c1f41b718d45ce677c7a, type: 3}
       propertyPath: m_IsTrigger
@@ -1154,7 +1174,7 @@ MonoBehaviour:
   singleShotRate: 1
   spreadShotRate: 1.5
   circularBurstRate: 2
-  patternSwitchTime: 16
+  patternSwitchTime: 12
 --- !u!58 &2065694966
 CircleCollider2D:
   m_ObjectHideFlags: 0

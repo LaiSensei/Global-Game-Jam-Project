@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 786852097740477376, guid: 79a88be8a98697b4f9ca2d8fc74ca53e, type: 3}
       propertyPath: m_Name
-      value: Bullet
+      value: PlayerBullet
       objectReference: {fileID: 0}
     - target: {fileID: 3231702689051224604, guid: 79a88be8a98697b4f9ca2d8fc74ca53e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -51,6 +51,26 @@ PrefabInstance:
     - target: {fileID: 3231702689051224604, guid: 79a88be8a98697b4f9ca2d8fc74ca53e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404264565945282163, guid: 79a88be8a98697b4f9ca2d8fc74ca53e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404264565945282163, guid: 79a88be8a98697b4f9ca2d8fc74ca53e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404264565945282163, guid: 79a88be8a98697b4f9ca2d8fc74ca53e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6991306443585722968, guid: 79a88be8a98697b4f9ca2d8fc74ca53e, type: 3}
+      propertyPath: m_Size.x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6991306443585722968, guid: 79a88be8a98697b4f9ca2d8fc74ca53e, type: 3}
+      propertyPath: m_Size.y
+      value: 0.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
