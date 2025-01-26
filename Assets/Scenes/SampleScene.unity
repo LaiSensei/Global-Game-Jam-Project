@@ -583,6 +583,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 300
   healthBar: {fileID: 190234893}
+  isPlayer: 0
 --- !u!61 &472040645
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2450,7 +2451,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6114460210205435790, guid: 2bec72722885edc40bb80373834af5ca, type: 3}
       propertyPath: m_Name
-      value: Bullet Variant
+      value: PlayerBullet
       objectReference: {fileID: 0}
     - target: {fileID: 8280088379996708434, guid: 2bec72722885edc40bb80373834af5ca, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2856,6 +2857,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 1000
   healthBar: {fileID: 1966628388}
+  isPlayer: 0
 --- !u!50 &2065694968
 Rigidbody2D:
   serializedVersion: 5
