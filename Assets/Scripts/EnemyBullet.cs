@@ -5,11 +5,14 @@ public class EnemyBullet : MonoBehaviour
     [Header("Bullet Settings")]
     public float speed = 5f; // Speed of the bullet
     public float lifetime = 3f; // Time before the bullet is destroyed
+    //public Animator purify; //create an animation class
 
     void Start()
     {
         // Destroy the bullet after its lifetime
         Destroy(gameObject, lifetime);
+        //grab the animation
+        //purify = GetComponent<Animator>(); 
     }
 
     void Update()
@@ -30,12 +33,13 @@ public class EnemyBullet : MonoBehaviour
             Destroy(gameObject); // Destroy the bullet
         }
 
-        // Optional: Destroy the bullet if it collides with other objects like walls
-        /*
-        if (collision.CompareTag("Wall"))
+        // Behavior for the enemy bullet colliding with player bullet
+        
+        if (collision.CompareTag("PlayerBullet"))
         {
+            Destroy(collision.gameObject);
             Destroy(gameObject);
         }
-        */
+        
     }
 }
